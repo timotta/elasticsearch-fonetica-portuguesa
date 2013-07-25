@@ -1,4 +1,4 @@
-#Portuguese Phonetic Analysis for ElasticSearch
+#Portuguese Phonetic Plugin for ElasticSearch
 
 A Phonetic plugin for portuguese languaged based on Phonetic Analysis plugin.
 
@@ -6,15 +6,15 @@ A Phonetic plugin for portuguese languaged based on Phonetic Analysis plugin.
 
 To install, clone this repository into your machine and run:
 
-    ./scripts/install.sh path_to_elasticsearch version_of_plugin
+    ./scripts/install.sh path_to_elasticsearch
     
 Here an example:
 
-    ./scripts/install.sh ~/Programas/elasticsearch-0.20.5 0.0.1
+    ./scripts/install.sh ~/Programas/elasticsearch-0.20.5
 
 ##Config
 
-In config/elasticsearch.yml configure an filter and an analyser like this:
+In `config/elasticsearch.yml` configure an filter and an analyser like this:
 
 ```
 index :
@@ -32,10 +32,10 @@ index :
 
   * The `replace` parameter (defaults to `true`) controls if the token processed should be replaced with the encoded one (set it to `true`), or added (set it to `false`).
 
-  * For best results never put asciifolding before your foneticaportuguesa filter
+  * For best results never put `asciifolding` before your `foneticaportuguesa` filter
 
 Then, you have to map your document to use this analyser. 
-Folder scripts has some examples using a analyser with the plugin and without the plugin, go there and have some fun. 
+Folder `scripts` has some examples using a analyser with the plugin and without the plugin, go there and have some fun. 
 
 ##License
 
