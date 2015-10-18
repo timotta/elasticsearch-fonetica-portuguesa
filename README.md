@@ -37,6 +37,10 @@ index :
 Then, you have to map your document to use this analyser. 
 Folder `scripts` has some examples using a analyser with the plugin and without the plugin, go there and have some fun. 
 
+##ElasticSearch Versions
+
+This plugin was created for elastic search 0.20 but i'm using without problems on elastic search 1.7.1 on my pet project (http://feedsearch.me). There is only one little bug for this version, the `replace` parameter is ignored and is always `false`.
+
 ##License
 
 Do whathever you want. I dont care.
