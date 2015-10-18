@@ -39,7 +39,7 @@ Folder `scripts` has some examples using a analyser with the plugin and without 
 
 ##ElasticSearch Versions
 
-This plugin was created for elastic search 0.20 but i'm using without problems on elastic search 1.7.1 on my pet project (http://feedsearch.me). There is only one little bug for this version, the `replace` parameter is ignored and is always `false`.
+This plugin was created for elastic search 0.20 but i'm using it without problems with elastic search 1.7.1 on my pet project (http://feedsearch.me). There is only one little bug for this version, the `replace` parameter is ignored and is always `false`.
 
 ##License
 
