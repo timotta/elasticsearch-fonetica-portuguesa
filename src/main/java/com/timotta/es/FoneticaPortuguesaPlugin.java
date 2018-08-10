@@ -1,24 +1,27 @@
 package com.timotta.es;
 
-import org.elasticsearch.index.analysis.AnalysisModule;
-import org.elasticsearch.plugins.AbstractPlugin;
+import java.util.Collections;
+import java.util.Map;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.elasticsearch.index.analysis.TokenFilterFactory;
+import org.elasticsearch.indices.analysis.AnalysisModule.AnalysisProvider;
+import org.elasticsearch.plugins.AnalysisPlugin;
+import org.elasticsearch.plugins.Plugin;
 
 /**
  */
-public class FoneticaPortuguesaPlugin extends AbstractPlugin {
+public class FoneticaPortuguesaPlugin extends Plugin implements AnalysisPlugin {
 
-    @Override
-    public String name() {
-        return "fonetica-portuguesa";
-    }
+	private final static Logger LOG = LogManager.getLogger(FoneticaPortuguesaPlugin.class);
 
-    @Override
-    public String description() {
-        return "Portuguese phonetic analysis support";
-    }
+	public FoneticaPortuguesaPlugin() {
+		LOG.info("Plugin fonetica portuguesa instanciado");
+	}
 
-    public void onModule(AnalysisModule module) {
-        module.addProcessor(new PhoneticAnalysisBinderProcessor());
-    }
+	@Override
+	public Map<String, AnalysisProvider<TokenFilterFactory>> getTokenFilters() {
+		return Collections.singletonMap("phonetic", PhoneticTokenFilterFactory::new);
+	}
 }
-
