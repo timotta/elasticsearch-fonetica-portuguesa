@@ -1,6 +1,6 @@
 package com.timotta.es;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.apache.commons.codec.EncoderException;
 import org.junit.Test;
@@ -160,6 +160,11 @@ public class FoneticaPortuguesaTests {
 		assertEncode("ela", "ela");
 		assertEncode("ele", "ele");
 		assertEncode("lá", "lá");
+	}
+	
+	@Test
+	public void testKatiaCassia() throws Exception {
+		assertEncode("cát", "kát");
 	}
 
 	@Test
