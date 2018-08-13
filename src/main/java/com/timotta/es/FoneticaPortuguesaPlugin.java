@@ -21,6 +21,6 @@ public class FoneticaPortuguesaPlugin extends Plugin implements AnalysisPlugin {
 
 	@Override
 	public Map<String, AnalysisProvider<TokenFilterFactory>> getTokenFilters() {
-		return Collections.singletonMap("phonetic-pt-br", PhoneticTokenFilterFactory::new);
+		return Collections.singletonMap("fonetica-portuguesa", PhoneticTokenFilterFactory::new);
 	}
 }
