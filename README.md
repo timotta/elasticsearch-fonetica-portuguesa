@@ -2,6 +2,7 @@
 
 A Phonetic plugin for portuguese languaged based on Phonetic Analysis plugin.
 
+
 ## Install
 
 To install, clone this repository into your machine and run the following commands on your terminal:
