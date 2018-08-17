@@ -2,7 +2,6 @@
 
 A Phonetic plugin for portuguese languaged based on Phonetic Analysis plugin.
 
-
 ## Install
 
 To install, clone this repository into your machine and run the following commands on your terminal:
@@ -10,8 +9,6 @@ To install, clone this repository into your machine and run the following comman
     mvn clean install
     sudo $ES_HOME/bin/elasticsearch-plugin install file://$(pwd)/target/releases/elasticsearch-fonetica-portuguesa-0.0.1.zip --verbose
     
-    
-
 ## Config
 
 In `config/elasticsearch.yml` configure an filter and an analyser like this:
@@ -43,5 +40,4 @@ This plugin was created for elastic search 5.4.0. I've forked the original branc
 
 ## License
 
-Still, do whathever you want. I dont care.
-
+Still, do whathever you want. I don't care.
