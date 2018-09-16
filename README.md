@@ -38,6 +38,3 @@ Folder `scripts` has some examples using a analyser with the plugin and without 
 
 This plugin was created for elastic search 5.4.0. I've forked the original branch and upgraded the code to be compatible with the latest elasticsearch versions
 
-## License
-
-Still, do whathever you want. I don't care.
