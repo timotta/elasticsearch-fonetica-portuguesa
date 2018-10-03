@@ -4,6 +4,7 @@ variables:
   GIT_STRATEGY: clone
 
 cache:
+  key: ${CI_PROJECT_NAME}
   paths:
     - .m2/repository
     
