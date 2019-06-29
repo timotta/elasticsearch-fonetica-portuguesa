@@ -1,4 +1,10 @@
 include:
   - project: 'Repositorio/Infraestrutura/configuracoes/dev-ops'
     ref: master
-    file: '/mvn.lib.yml'
+    file: '/mvn.ci-template.yml'
+
+variables:
+  MVN_CI_STYLE:         "library"     
+  MVN_CI_TESTS_STYLE:   "in-memory"   
+  MVN_CI_DEPLOY_STYLE:  "none"        
+  MVN_CI_PUBLISH_STYLE: "nexus"
