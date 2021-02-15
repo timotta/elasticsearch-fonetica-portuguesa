@@ -1,18 +1,15 @@
-#Portuguese Phonetic Plugin for ElasticSearch
+# Portuguese Phonetic Plugin for ElasticSearch
 
 A Phonetic plugin for portuguese languaged based on Phonetic Analysis plugin.
 
-##Install
+## Install
 
-To install, clone this repository into your machine and run:
+To install, clone this repository into your machine and run the following commands on your terminal:
 
-    ./scripts/install.sh path_to_elasticsearch
+    mvn clean install
+    sudo $ES_HOME/bin/elasticsearch-plugin install file://$(pwd)/target/releases/elasticsearch-fonetica-portuguesa-0.0.1.zip --verbose
     
-Here an example:
-
-    ./scripts/install.sh ~/Programas/elasticsearch-0.20.5
-
-##Config
+## Config
 
 In `config/elasticsearch.yml` configure an filter and an analyser like this:
 
@@ -37,11 +34,7 @@ index :
 Then, you have to map your document to use this analyser. 
 Folder `scripts` has some examples using a analyser with the plugin and without the plugin, go there and have some fun. 
 
-##ElasticSearch Versions
+## ElasticSearch Versions
 
-This plugin was created for elastic search 0.20 but i'm using it without problems with elastic search 1.7.1 on my pet project (http://feedsearch.me). There is only one little bug for this version, the `replace` parameter is ignored and is always `false`.
-
-##License
-
-Do whathever you want. I dont care.
+This plugin was created for elastic search 5.4.0. I've forked the original branch and upgraded the code to be compatible with the latest elasticsearch versions
 
